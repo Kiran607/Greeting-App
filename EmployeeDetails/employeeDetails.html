@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Greeting App</title>
-    </head>
-        <body>
-            <h1>Welcome to Greeting App</h1>
-            <div>
-                <form>
-                    <table>
-                        <tr>
-                            <td>
-                                First Name:<input type="text" name="first_name"/><br>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Last Name :<input type="text" name="last_name"/><br> 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Email     :<input type="text" name ="email"/><br>
-                            </td>
-                        </tr>
-                    </table>
-                    <input type="submit" name="submit" value="Submit"/>
-                </form>
-            </div>
-        </body>
+
+<head>
+    <title>Greeting App</title>
+    <link href="styleSheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Welcome to Greeting App</h1>
+    <div id="details">
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        First Name:<input type="text" name="first_name" /><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name :<input type="text" name="last_name" /><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email :<input type="text" name="email" /><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="button">
+                        <input type="button" name="submit" value="Submit" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
 </html>
