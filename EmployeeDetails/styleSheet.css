@@ -2,11 +2,22 @@ h1{
     color: blue;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    font-size: xx-large;
+}
+table,tr,th{
+    border-collapse: collapse;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: 150px;
+    font-family: 'Times New Roman', Times, serif;
     font-size: x-large;
 }
-td{
-    color:red;
-    text-align: center;
-    font-size: larger;
-    margin-left: 40px;
+h2{
+    color: blue;
+}
+.addbtn{
+    padding: 15px;
+}
+.deletebtn{
+    padding: 15px;
 }
