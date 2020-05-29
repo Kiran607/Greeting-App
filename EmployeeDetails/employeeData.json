@@ -1,23 +1,25 @@
-[
+{
+    "Employee":[
     {
         "firstName":"kiran",
         "lastName":"ic",
         "email":"ivkiran@gmail.com",
-        "edit":"edit",
-        "delete":"delete"
+        "edit":"../Assests/edit.png",
+        "delete":"../Assests/delete.png"
     },
     {
         "firstName":"raj",
         "lastName":"kumar",
         "email":"raj@gmail.com",
         "edit":"../Assests/edit.png",
-        "delete":"delete"
+        "delete":"../Assests/delete.png"
     },
     {
         "firstName":"kavya",
         "lastName":"shree",
         "email":"shree@gmail.com",
-        "edit":"edit",
-        "delete":"C:\\Kiran\\WebDevelopment\\GreetingApp\\Assests\\delete.png"
+        "edit":"../Assests/edit.png",
+        "delete":"../Assests/delete.png"
     }
 ]
+}
