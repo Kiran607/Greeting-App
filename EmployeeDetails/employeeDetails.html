@@ -3,45 +3,47 @@
 
 <head>
     <title>Greeting App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="styleSheet.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <h1>Welcome to Greeting App</h1>
     <div id="details">
         <button class="addbtn">
-            <img src="../Images/add.png" alt="Image not loaded" width="64" height="64">
+            <img src="../Assests/add.png" alt="Image not loaded" width="50" height="50">
             AddEmployee
-        </button><br><br>
+        </button><br>
         <br>
         <br>
-        <form>
-            <table>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button class="addbtn">
-                            <img src="../Images/edit.png" width="64" height="64">
-                        </button>
-                    </td>
-                    <td>
-                        <button class="addbtn">
-                            <img src="../Images/delete.png" width="64" height="64">
-                        </button>
-                    </td>
-                </tr>
-            </table>
-        </form>
+        <table class="table">
+            <tr class="first row">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr class="second row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="addbtn">
+                        <img src="../Assests/edit.png" width="50" height="50">
+                    </button>
+                </td>
+                <td>
+                    <button class="addbtn">
+                        <img src="../Assests/delete.png" width="50" height="50">
+                    </button>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
+<script src="employeeDetails.js"></script>
 
 </html>
