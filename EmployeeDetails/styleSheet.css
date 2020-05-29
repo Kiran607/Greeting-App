@@ -18,6 +18,8 @@ td{
     height: 60px;
     text-align: center;
     background-color: gainsboro;
+    width:10px;
+    height: 10px;
 }
 .addbtn{
     font-size: 30px;
@@ -25,11 +27,18 @@ td{
     background-color: cornflowerblue;
     text-align: center;
     border-radius: 12px;
-    padding: 20px;
+    padding:20px;
 }
 body{
     background-color: whitesmoke;
 }
 .second row{
     width: 90px;
+}
+img{
+    width: 50px;
+    height:50px;
+    background-color: cornflowerblue;
+    border-radius: 12px;
+    padding: 20px;
 }
