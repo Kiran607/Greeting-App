@@ -1,0 +1,23 @@
+[
+    {
+        "firstName":"kiran",
+        "lastName":"ic",
+        "email":"ivkiran@gmail.com",
+        "edit":"edit",
+        "delete":"delete"
+    },
+    {
+        "firstName":"raj",
+        "lastName":"kumar",
+        "email":"raj@gmail.com",
+        "edit":"../Assests/edit.png",
+        "delete":"delete"
+    },
+    {
+        "firstName":"kavya",
+        "lastName":"shree",
+        "email":"shree@gmail.com",
+        "edit":"edit",
+        "delete":"C:\\Kiran\\WebDevelopment\\GreetingApp\\Assests\\delete.png"
+    }
+]
