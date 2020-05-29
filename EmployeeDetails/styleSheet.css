@@ -6,7 +6,7 @@ h1{
 
 .table{
     font-size: 25px;
-    width:90%;
+    width: 90%;
     border-collapse: collapse;
     border-top-style: solid;
     border-bottom-style: inherit;
@@ -29,4 +29,7 @@ td{
 }
 body{
     background-color: whitesmoke;
+}
+.second row{
+    width: 90px;
 }
