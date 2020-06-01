@@ -20,6 +20,13 @@
         "email":"shree@gmail.com",
         "edit":"../Assests/edit.png",
         "delete":"../Assests/delete.png"
+    },
+    {
+        "firstName":"prajwal",
+        "lastName":"shree",
+        "email":"praju@gmail.com",
+        "edit":"../Assests/edit.png",
+        "delete":"../Assests/delete.png"
     }
 ]
 }
