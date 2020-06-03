@@ -1,0 +1,19 @@
+table{
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+td{
+    text-align: right;
+    padding: 10px;
+    border-collapse: collapse;
+}
+#btn{
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 4px;
+    background-color: cornflowerblue;
+
+}
