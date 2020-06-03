@@ -1,32 +1,40 @@
 {
-    "Employee":[
+  "employee": [
     {
-        "firstName":"kiran",
-        "lastName":"ic",
-        "email":"ivkiran@gmail.com",
-        "edit":"../Assests/edit.png",
-        "delete":"../Assests/delete.png"
+      "id": 1,
+      "firstName": "raj",
+      "lastName": "kumar",
+      "email": "raj@gmail.com",
+      "edit": "../Assests/edit.png",
+      "delete": "../Assests/delete.png"
     },
     {
-        "firstName":"raj",
-        "lastName":"kumar",
-        "email":"raj@gmail.com",
-        "edit":"../Assests/edit.png",
-        "delete":"../Assests/delete.png"
+      "id": 2,
+      "firstName": "kavya",
+      "lastName": "shree",
+      "email": "shree@gmail.com",
+      "edit": "../Assests/edit.png",
+      "delete": "../Assests/delete.png"
     },
     {
-        "firstName":"kavya",
-        "lastName":"shree",
-        "email":"shree@gmail.com",
-        "edit":"../Assests/edit.png",
-        "delete":"../Assests/delete.png"
+      "id": 3,
+      "firstName": "kiran",
+      "lastName": "raj",
+      "email": "karti@gmail.com",
+      "edit": "../Assests/edit.png",
+      "delete": "../Assests/delete.png"
     },
     {
-        "firstName":"prajwal",
-        "lastName":"shree",
-        "email":"praju@gmail.com",
-        "edit":"../Assests/edit.png",
-        "delete":"../Assests/delete.png"
+      "id": "5",
+      "firstName": "praju",
+      "lastName": "N",
+      "email": "praju@gmail.com"
+    },
+    {
+      "id": "6",
+      "firstName": "karthi",
+      "lastName": "M",
+      "email": "karthikmm00@gmail.com"
     }
-]
+  ]
 }
