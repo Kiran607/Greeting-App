@@ -56,3 +56,10 @@ img{
     height: 50px;
 }
 
+#employee-container{
+    font-size: 25px;
+    width: 90%;
+    border-collapse: collapse;
+    border-top: 1px outset;
+}
+
