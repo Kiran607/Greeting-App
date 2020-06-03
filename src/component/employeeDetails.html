@@ -10,7 +10,7 @@
 <body>
     <h1>Welcome to Greeting App</h1>
     <div class="button">
-        <button class="addbtn">
+        <button class="addbtn" onclick="document.location='../component/addEmployee.html'">
             <img src="../Assests/add (1).png" alt="Image not loaded">
             AddEmployee
         </button>
@@ -18,8 +18,9 @@
     <br>
     <br>
     <div>
-        <table class="table">
+        <table class="table" id="myTable">
             <tr class="first row">
+                <th>Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>

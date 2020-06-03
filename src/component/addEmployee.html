@@ -2,17 +2,23 @@
 <html>
 
 <head>
+    <link href="../component/addStyle.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="../component/styleSheet.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <div class="data">
-        <form method="POST" class="From" id="myFrom">
+        <form class="Form" id="myForm">
             <table id="employeeData">
-                <div>
+                <div id="tableData">
                     <tr>
                         <td>
+                            <label for="Id">Id</label>
+                            <input type="text" id="id">
+                        </td>
+                    </tr>
+                    <tr id="row">
+                        <td id>
                             <label for="firstName">First Name</label>
                             <input type="text" id="fName">
                         </td>
@@ -34,7 +40,7 @@
                         </td>
                     </tr>
                 </div>
-                <div>
+                <div class="button">
                     <tr>
                         <td><button class="addEmployee" id="btn">Submit</button></td>
                     </tr>
@@ -43,7 +49,7 @@
             </table>
         </form>
     </div>
-    <script src="../employeeData/emp.js"></script>
+    <script src="../employeeData/employeeDetails.js"></script>
 
 </body>
 
