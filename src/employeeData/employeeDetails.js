@@ -16,7 +16,7 @@ function getEmployee() {
                 let tblRow = "<tr><td>" + data1.id + "</td>" + "<td>" + data1.firstName + "</td>"
                     + "<td>" + data1.lastName + "</td>"
                     + "<td>" + data1.email + "</td>"
-                    + "<td>" + "<a href=../component/editEmployee.html>" + "<button class=editbtn" + "data-id=" + data1.id + ">" + "<img src=" + '/src/Assests/edit.png' + "></button></a></td>"
+                    + "<td>" + "<a href=/component/editEmployee.html> <button class=editbtn data-id=" + data1.id + " >" + "<img src=" + '/src/Assests/edit.png' + "></button></a></td>"
                     + "<td calss-deleteEmp>" + "<button class=deletebtn data-id=" + data1.id + ">" + "<img src=" + '/src/Assests/delete.png' + "></button></td></tr>"
                 $(tblRow).appendTo("#employeeBody");
             });
@@ -39,6 +39,8 @@ $("#btn").on("click", function (e) {
     }
     addEmployee(employee);
     e.preventDefault();
+    $(".Form").trigger("reset");
+    // window.location.href="employeeDetails.html"
 });
 
 function addEmployee(employee) {
@@ -59,7 +61,7 @@ function addEmployee(employee) {
 
 function updateEmployee(id, data) {
     $.ajax({
-        url: 'http://localhost:3000/employee/ ' + id,
+        url: 'http://localhost:3000/employee/'+id,
         method: 'PUT',
         dataType: 'json',
         data: data,
@@ -76,7 +78,9 @@ function updateEmployee(id, data) {
 function loadButtons() {
     $(".editbtn").click(function (e) {
         e.preventDefault();
+        console.log("kiran")
         editOneEmployeeValue($($(this)[0]).data("id"));
+        window.location.href="editEmployee.html";
     });
 
     $(".deletebtn").click(function (e) {
@@ -89,32 +93,35 @@ function loadButtons() {
 
 function editOneEmployeeValue(id) {
     $.ajax({
-        type: 'get',
-        url: 'http://localhost:3000/employee',
+        method: 'GET',
+        url: 'http://localhost:3000/employee/'+id,
         dataType: 'json',
-        success: function (data) {
-            $($('.EditForm')[0].editid).val(data.id),
-            $($('.EditForm')[0].editFirstName).val(data.firstName),
-            $($('.EditForm')[0].editLastName).val(data.lastName),
-            $($('.EditForm')[0].editEmail).val(data.email)
-            $('.EditForm').show();
+        success: function (data) { 
+            $($("#updateForm")[0].editid).val(data.id);
+            $($("#updateForm")[0].editFirstName).val(data.firstName);
+            $($("#updateForm")[0].editLastName).val(data.lastName);
+            $($("#updateForm")[0].editEmail).val(data.email);
+            // getEmployee();
+            // $("#updateForm").show();
         },
-        error: function () {
-            alert("nont saving employee data");
+        error: function (error) {
+            alert(error);
+            alert("nont fetching employee data");
         }
     });
 }
 
 $("#editButton").on("click", function (e) {
     let employee = {
-        id: $($('.EditForm')[0].editid).val(),
-        firstName: $($('.EditForm')[0].editFirstName).val(),
-        lastName: $($('.EditForm')[0].editLastName).val(),
-        email: $($('.EditForm')[0].editEmail).val(),
+        id: $('#editid').val(),
+        firstName: $('#editFirstName').val(),
+        lastName: $('#editLastName').val(),
+        email: $('#editEmail').val(),
     }
-    updateEmployee($($('.EditForm')[0].editid).val(), employee);
+    updateEmployee($('#editid').val(), employee);
     e.preventDefault();
     document.forms[0].reset();
+    // window.location.href="employeeDetails.html"
 });
 
 function deleteEmployee(id) {
