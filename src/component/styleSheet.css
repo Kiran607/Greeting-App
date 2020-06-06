@@ -67,26 +67,31 @@ img{
     display: none;
     position: fixed;
     bottom: 0;
-    right: 15px;
+    left: 0;
+    top: 0;
     border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-
-  .editForm{
-    width:400px;
+    z-index: 1;
+    width:50%;
+    height: 50%;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
     background: #fff;
     padding: 20px;
     margin: 8% auto 0;
     text-align: left;
     border-radius: 4px;
+    overflow: auto;
+    padding-top: 50px;
   }
-
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
   #editButton{
     color: #fff;
     padding: 5px;
     margin: 10px 0;
-    width: 50%;
+    width: 30%;
     border: none;
     outline: none;
     font-size: 20px;
@@ -105,7 +110,19 @@ img{
 }
 h2{
     text-align: center;
+    color: cornflowerblue;
+    font-size: 25px;
 }
 #updateForm{
-    margin-top: 50px;  
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 80%; 
 }
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: black
+  }

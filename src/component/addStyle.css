@@ -13,6 +13,7 @@
 }
 h2{
     text-align: center;
+    color: cornflowerblue;
 }
 
 #myForm{
@@ -66,7 +67,7 @@ body{
     font-family: sans-serif;
     background-size: cover;
     background-position: center;
-    background-color: yellowgreen;
+    background-color: #DFCFBE;
 }
 
 .input-box{
