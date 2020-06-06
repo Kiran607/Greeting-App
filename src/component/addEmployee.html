@@ -8,24 +8,24 @@
 
 <body>
     <div class="add-employeeForm">
-        <form class="Form" id="myForm">
+        <form class="Form" id="myForm" name="validteForm" onsubmit="return(validateForm());" autocomplete="off">
             <img src="../Assests/add.png" ><br>
             <h2>Adding Employee Details</h2>
 
             <label for="Id"><b>Id</b></label><br>
-            <input type="number" id="id" class="input-box" required><br>
+            <input type="number" id="id" class="input-box" name="id" placeholder="Enter Id"><br>
 
             <label for="firstName"><b>First Name</b></label><br>
-            <input type="text" id="fName" class="input-box" required><br>
+            <input type="text" id="fName" class="input-box" name="firstName" placeholder="Enter First Name" ><br>
 
             <label for="lastName"><b>Last Name</b></label><br>
-            <input type="text" id="lName" class="input-box" required><br>
+            <input type="text" id="lName" class="input-box" name="lastName" placeholder="Enter Last Name" ><br>
 
             <label for="email"><b>Email</b></label><br>
-            <input type="email" id="email" class="input-box" required><br>
+            <input type="email" id="email" class="input-box" name="email" placeholder="Enter Email" ><br>
 
             <div class="button">
-            <button class="addEmployee" id="btn">Submit</button>
+            <button type="submit" class="addEmployee" id="btn">Submit</button>
             </div>
         </form>
     </div>
