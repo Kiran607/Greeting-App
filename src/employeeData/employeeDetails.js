@@ -5,7 +5,7 @@ $(document).ready(function () {
 function getEmployee() {
     $('#employeeBody').html('');
     $.ajax({
-        type: 'get',
+        method: 'GET',
         url: 'http://localhost:3000/employee',
         dataType: 'json',
         data: {
@@ -16,7 +16,7 @@ function getEmployee() {
                 let tblRow = "<tr><td>" + data1.id + "</td>" + "<td>" + data1.firstName + "</td>"
                     + "<td>" + data1.lastName + "</td>"
                     + "<td>" + data1.email + "</td>"
-                    + "<td>" + "<a href=/component/editEmployee.html> <button class=editbtn data-id=" + data1.id + " >" + "<img src=" + '/src/Assests/edit.png' + "></button></a></td>"
+                    + "<td>" + "<button class=editbtn data-id=" + data1.id + " >" + "<img src=" + '/src/Assests/edit.png' + "></button></td>"
                     + "<td calss-deleteEmp>" + "<button class=deletebtn data-id=" + data1.id + ">" + "<img src=" + '/src/Assests/delete.png' + "></button></td></tr>"
                 $(tblRow).appendTo("#employeeBody");
             });
@@ -24,7 +24,7 @@ function getEmployee() {
         },
 
         error: function () {
-            alert("nont saving employee data");
+            alert("not fetching employee data");
         }
 
     });
@@ -61,7 +61,7 @@ function addEmployee(employee) {
 
 function updateEmployee(id, data) {
     $.ajax({
-        url: 'http://localhost:3000/employee/'+id,
+        url: 'http://localhost:3000/employee/' + id,
         method: 'PUT',
         dataType: 'json',
         data: data,
@@ -80,7 +80,7 @@ function loadButtons() {
         e.preventDefault();
         console.log("kiran")
         editOneEmployeeValue($($(this)[0]).data("id"));
-        window.location.href="editEmployee.html";
+        updateForm();
     });
 
     $(".deletebtn").click(function (e) {
@@ -89,20 +89,20 @@ function loadButtons() {
     });
 }
 
-
-
 function editOneEmployeeValue(id) {
     $.ajax({
         method: 'GET',
-        url: 'http://localhost:3000/employee/'+id,
+        url: 'http://localhost:3000/employee/' + id,
         dataType: 'json',
-        success: function (data) { 
-            $($("#updateForm")[0].editid).val(data.id);
-            $($("#updateForm")[0].editFirstName).val(data.firstName);
-            $($("#updateForm")[0].editLastName).val(data.lastName);
-            $($("#updateForm")[0].editEmail).val(data.email);
-            // getEmployee();
-            // $("#updateForm").show();
+        success: function (data) {
+
+            $('#editid').val(data.id);
+            $('#editFirstName').val(data.firstName);
+            $('#editLastName').val(data.lastName);
+            $('#editEmail').val(data.email);
+            $("#updateForm").show();
+            getEmployee();
+
         },
         error: function (error) {
             alert(error);
@@ -120,8 +120,7 @@ $("#editButton").on("click", function (e) {
     }
     updateEmployee($('#editid').val(), employee);
     e.preventDefault();
-    document.forms[0].reset();
-    // window.location.href="employeeDetails.html"
+    $('#updateForm').toggle();
 });
 
 function deleteEmployee(id) {
@@ -137,4 +136,8 @@ function deleteEmployee(id) {
             alert("Not Deleted");
         }
     });
+}
+
+function updateForm() {
+    document.getElementById("updateDiv").style.display = "block";
 }
