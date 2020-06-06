@@ -1,19 +1,79 @@
-table{
-    font-size: 30px;
-    margin-right: auto;
-    margin-left: auto;
-}
-td{
-    text-align: right;
-    padding: 10px;
-    border-collapse: collapse;
-}
 #btn{
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
+    padding: 5px;
+    margin: 10px 0;
+    width: 40%;
     border: none;
-    border-radius: 4px;
-    background-color: cornflowerblue;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #1c8adb;
+    
+}
+h2{
+    text-align: center;
+}
 
+#myForm{
+    margin-top: 50px;  
+}
+#editButton{
+    color: #fff;
+    padding: 5px;
+    margin: 10px 0;
+    width: 50%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #1c8adb;
+}
+#updateForm{
+    margin-top: 50px;
+    
+}
+img{
+    width: 70px;
+    margin-top: -50px;
+    align-content: center;
+}
+
+.edit-emploee-form{
+    width:400px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: left;
+    border-radius: 4px;
+}
+
+.add-employeeForm{
+    width:400px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: left;
+    border-radius: 4px
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-color: yellowgreen;
+}
+
+.input-box{
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border: 1px solid #999;
+    outline: none;
 }

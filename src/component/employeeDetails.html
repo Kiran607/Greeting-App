@@ -12,23 +12,50 @@
     <div class="button">
         <button class="addbtn" onclick="document.location='../component/addEmployee.html'">
             <img src="../Assests/add (1).png" alt="Image not loaded">
-            AddEmployee
+            <label for="addEmployee">AddEmployee</label>
         </button>
     </div>
-    <br>
-    <br>
-    <div>
-        <table class="table" id="myTable">
-            <tr class="first row">
-                <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-            <tbody id="employeeBody"></tbody>
-        </table>
+    <form>
+        <br>
+        <br>
+        <div>
+            <table class="table" id="myTable">
+                <tr class="first row">
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <div>
+                    <tbody id="employeeBody"></tbody>
+                </div>
+            </table>
+    </form>
+    </div>
+
+    <div class="form-popup" id="updateDiv">
+        <form class="editForm" id="updateForm">
+            <img src="../Assests/edit.png"><br>
+            <h2>Updating Employee Details</h2>
+
+            <input type="hidden" id="form-control">
+
+            <label for="Id"><b>Id:</b></label><br>
+            <input type="number" name="updateId" id="editid" class="input-box" required><br>
+
+            <label for="firstName"><b>FirstName</b>:</label><br>
+            <input type="text" name="updateFName" id="editFirstName" class="input-box" required><br>
+
+            <label for="lastName"><b>LastName:</b></label><br>
+            <input type="text" name="updateLName" id="editLastName" class="input-box" required><br>
+
+            <label for="email"><b>Email:</b></label><br>
+            <input type="email" name="updateEmail" id="editEmail" class="input-box" required><br>
+            <button class="updateEmployee" id="editButton">Update</button>
+        </form>
+            
     </div>
 </body>
 <script src="../employeeData/employeeDetails.js"></script>

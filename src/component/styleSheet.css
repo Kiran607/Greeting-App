@@ -18,7 +18,7 @@ th{
     border-bottom: 1px outset;
 }
 td{
-    height: 60px;
+    height: 100px;
     text-align: center;
     background-color: gainsboro;
 }
@@ -45,7 +45,7 @@ img{
     text-align: center;
     font-size: 30px;
     border-radius: 4px;
-    height: 50px;
+    
 }
 .deletebtn{
     background-color: cornflowerblue;
@@ -53,7 +53,7 @@ img{
     text-align: center;
     font-size: 30px;
     border-radius: 4px;
-    height: 50px;
+    
 }
 
 #employee-container{
@@ -63,3 +63,49 @@ img{
     border-top: 1px outset;
 }
 
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+
+  .editForm{
+    width:400px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    background: #fff;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: left;
+    border-radius: 4px;
+  }
+
+  #editButton{
+    color: #fff;
+    padding: 5px;
+    margin: 10px 0;
+    width: 50%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #1c8adb;
+}
+
+.input-box{
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 50%;
+    border: 1px solid #999;
+    outline: none;
+}
+h2{
+    text-align: center;
+}
+#updateForm{
+    margin-top: 50px;  
+}
