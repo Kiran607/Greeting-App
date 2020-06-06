@@ -31,6 +31,7 @@ function getEmployee() {
 }
 
 $("#btn").on("click", function (e) {
+    if(validateForm()==true){
     let employee = {
         id: $($('.Form')[0].id).val(),
         firstName: $($('.Form')[0].fName).val(),
@@ -40,7 +41,7 @@ $("#btn").on("click", function (e) {
     addEmployee(employee);
     e.preventDefault();
     $(".Form").trigger("reset");
-    // window.location.href="employeeDetails.html"
+}
 });
 
 function addEmployee(employee) {
@@ -52,6 +53,7 @@ function addEmployee(employee) {
         success: function (employee) {
             console.log("Added successfully", employee);
             getEmployee();
+            location.href = "employeeDetails.html";
         },
         error: function () {
             console.log("nont saving employee data");
@@ -138,6 +140,38 @@ function deleteEmployee(id) {
     });
 }
 
+let modal = document.getElementById('updateDiv');
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 function updateForm() {
     document.getElementById("updateDiv").style.display = "block";
+}
+
+function validateForm() {
+    if( document.validteForm.id.value == "" ) {
+        alert( "Please provide ID!" );
+        document.validteForm.id.focus() ;
+        return false;
+     }
+     if( document.validteForm.firstName.value == "" ) {
+        alert( "Please provide your First Name!" );
+        document.validteForm.firstName.focus() ;
+        return false;
+     }
+     if( document.validteForm.lastName.value == "" ) {
+        alert( "Please provide your Last Name!" );
+        document.validteForm.lastName.focus() ;
+        return false;
+     }
+     if( document.validteForm.email.value == "" ) {
+        alert( "Please provide your Email!" );
+        document.validteForm.email.focus() ;
+        return false;
+     }
+     return true;
 }
