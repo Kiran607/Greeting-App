@@ -31,17 +31,17 @@ function getEmployee() {
 }
 
 $("#btn").on("click", function (e) {
-    if(validateForm()==true){
-    let employee = {
-        id: $($('.Form')[0].id).val(),
-        firstName: $($('.Form')[0].fName).val(),
-        lastName: $($('.Form')[0].lName).val(),
-        email: $($('.Form')[0].email).val(),
+    if (validateForm() == true) {
+        let employee = {
+            id: $($('.Form')[0].id).val(),
+            firstName: $($('.Form')[0].fName).val(),
+            lastName: $($('.Form')[0].lName).val(),
+            email: $($('.Form')[0].email).val(),
+        }
+        addEmployee(employee);
+        e.preventDefault();
+        $(".Form").trigger("reset");
     }
-    addEmployee(employee);
-    e.preventDefault();
-    $(".Form").trigger("reset");
-}
 });
 
 function addEmployee(employee) {
@@ -114,15 +114,17 @@ function editOneEmployeeValue(id) {
 }
 
 $("#editButton").on("click", function (e) {
-    let employee = {
-        id: $('#editid').val(),
-        firstName: $('#editFirstName').val(),
-        lastName: $('#editLastName').val(),
-        email: $('#editEmail').val(),
+    if (editValidateForm == true) {
+        let employee = {
+            id: $('#editid').val(),
+            firstName: $('#editFirstName').val(),
+            lastName: $('#editLastName').val(),
+            email: $('#editEmail').val(),
+        }
+        updateEmployee($('#editid').val(), employee);
+        e.preventDefault();
+        $('#updateForm').toggle();
     }
-    updateEmployee($('#editid').val(), employee);
-    e.preventDefault();
-    $('#updateForm').toggle();
 });
 
 function deleteEmployee(id) {
@@ -153,25 +155,73 @@ function updateForm() {
 }
 
 function validateForm() {
-    if( document.validteForm.id.value == "" ) {
-        alert( "Please provide ID!" );
-        document.validteForm.id.focus() ;
+    let firstName = document.getElementById('fName').value;
+    let firstNameRGEX = /^[A-Z][a-z]{3,}$/;
+    let firstNameResult = firstNameRGEX.test(firstName);
+
+    let lastName = document.getElementById('lName').value;
+    let lastNameRGEX = /^[A-Z][a-z]{2,}$/;
+    let lastNameResult = lastNameRGEX.test(lastName);
+
+    let email = document.getElementById('email').value;
+    let emailRGEX = /^[a-z]{3,}(|[.]?[0-9a-zA-Z]+)([@])([a-z0-9]+)([.|+|_][a-z]{2,4})(|[.][a-zA-Z]{2})$/;
+    let emailResult = emailRGEX.test(email);
+
+    if (document.validteForm.id.value == "") {
+        alert("Please provide ID!");
+        document.validteForm.id.focus();
         return false;
-     }
-     if( document.validteForm.firstName.value == "" ) {
-        alert( "Please provide your First Name!" );
-        document.validteForm.firstName.focus() ;
+    }
+    if (firstNameResult == false) {
+        alert("Name must contain starting captial letter and name length should be greater than 3!");
+        document.validteForm.firstName.focus();
         return false;
-     }
-     if( document.validteForm.lastName.value == "" ) {
-        alert( "Please provide your Last Name!" );
-        document.validteForm.lastName.focus() ;
+    }
+    if (lastNameResult == false) {
+        alert("Last Name must contain starting captial letter and name length should be greater than 2!");
+        document.validteForm.lastName.focus();
         return false;
-     }
-     if( document.validteForm.email.value == "" ) {
-        alert( "Please provide your Email!" );
-        document.validteForm.email.focus() ;
+    }
+    if (emailResult == false) {
+        alert("please provide valid email ex:abc@gmail.com");
+        document.validteForm.email.focus();
         return false;
-     }
-     return true;
+    }
+    return true;
+}
+
+function editValidateForm() {
+    let firstName = document.getElementById('updateFName').value;
+    let firstNameRGEX = /^[A-Z][a-z]{3,}$/;
+    let firstNameResult = firstNameRGEX.test(firstName);
+
+    let lastName = document.getElementById('updateLName').value;
+    let lastNameRGEX = /^[A-Z][a-z]{2,}$/;
+    let lastNameResult = lastNameRGEX.test(lastName);
+
+    let email = document.getElementById('updateEmail').value;
+    let emailRGEX = /^[a-z]{3,}(|[.]?[0-9a-zA-Z]+)([@])([a-z0-9]+)([.|+|_][a-z]{2,4})(|[.][a-zA-Z]{2})$/;
+    let emailResult = emailRGEX.test(email);
+
+    if (document.editValidateForm.updateId.value == "") {
+        alert("Please provide ID!");
+        document.editValidateForm.id.focus();
+        return false;
+    }
+    if (firstNameResult == false) {
+        alert("Please provide your First Name!");
+        document.editValidateForm.updateFName.focus();
+        return false;
+    }
+    if (lastNameResult == false) {
+        alert("Please provide your Last Name!");
+        document.validteForm.updateLName.focus();
+        return false;
+    }
+    if (emailResult == false) {
+        alert("Please provide your Email!");
+        document.validteForm.updateEmail.focus();
+        return false;
+    }
+    return true;
 }
