@@ -15,12 +15,10 @@
             <label for="addEmployee">AddEmployee</label>
         </button>
     </div>
-    <form>
-        <br>
-        <br>
-        <div>
+    <form id="fetch-form">
+        <div id="table-content">
             <table class="table" id="myTable">
-                <tr class="first row">
+                <tr class="first-row">
                     <th>Id</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -36,7 +34,7 @@
     </div>
 
     <div class="form-popup" id="updateDiv">
-        <form class="editForm" id="updateForm">
+        <form class="editForm" id="updateForm" name="editVaildateForm">
             <span onclick="document.getElementById('updateDiv').style.display='none'" class="close" title="Close Modal">×</span>
             <img src="../Assests/edit.png"><br>
             <h2>Updating Employee Details</h2>
@@ -60,5 +58,4 @@
     </div>
 </body>
 <script src="../employeeData/employeeDetails.js"></script>
-
 </html>
